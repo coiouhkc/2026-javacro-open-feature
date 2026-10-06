@@ -182,7 +182,17 @@ Flagd + Quarkus
 
 <!--
 https://docs.quarkiverse.io/quarkus-openfeature/dev/testing.html
+
+https://github.com/jbangdev/jbang/issues/2672
 -->
+
+---
+
+### How feature flags (contd.)?
+
+###### OpenFeature
+
+Unleash + SpringBoot
 
 ---
 
