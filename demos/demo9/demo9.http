@@ -1,0 +1,5 @@
+curl http://localhost:8080/pizza 
+
+###
+
+curl -H "x-pizzeria-location: ca" http://localhost:8080/pizza 

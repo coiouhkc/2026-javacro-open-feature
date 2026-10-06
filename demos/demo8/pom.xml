@@ -40,14 +40,6 @@
             <groupId>io.quarkiverse.openfeature</groupId>
             <artifactId>quarkus-openfeature-flagd</artifactId>
             <version>${quarkus-openfeature.version}</version>
-            <exclusions>
-                <!-- quarkus-devservices-deployment does not depend on its runtime artifact,
-                     which makes Quarkus' dependency resolution fail -->
-                <!--<exclusion>
-                    <groupId>io.quarkus</groupId>
-                    <artifactId>quarkus-devservices</artifactId>
-                </exclusion>-->
-            </exclusions>
         </dependency>
     </dependencies>
 

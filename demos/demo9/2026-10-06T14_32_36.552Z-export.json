@@ -1,0 +1,81 @@
+{
+    "features": [
+        {
+            "name": "list-pizza-hawaii",
+            "description": null,
+            "type": "release",
+            "project": "default",
+            "stale": false,
+            "impressionData": false,
+            "archived": false
+        }
+    ],
+    "featureStrategies": [
+        {
+            "name": "flexibleRollout",
+            "id": "01M48SJ8BPSVZWXMCWHAWPBAA9",
+            "featureName": "list-pizza-hawaii",
+            "title": null,
+            "parameters": {
+                "groupId": "list-pizza-hawaii",
+                "rollout": "100",
+                "stickiness": "default"
+            },
+            "constraints": [
+                {
+                    "values": [
+                        "ca"
+                    ],
+                    "inverted": false,
+                    "operator": "IN",
+                    "contextName": "location",
+                    "caseInsensitive": false
+                }
+            ],
+            "variants": [],
+            "disabled": false,
+            "segments": []
+        }
+    ],
+    "featureEnvironments": [
+        {
+            "enabled": true,
+            "featureName": "list-pizza-hawaii",
+            "environment": "development",
+            "variants": [],
+            "name": "list-pizza-hawaii"
+        }
+    ],
+    "contextFields": [
+        {
+            "name": "location",
+            "description": "",
+            "stickiness": false,
+            "sortOrder": 0,
+            "legalValues": [
+                {
+                    "value": "ca",
+                    "description": ""
+                },
+                {
+                    "value": "cr",
+                    "description": ""
+                },
+                {
+                    "value": "de",
+                    "description": ""
+                },
+                {
+                    "value": "nl",
+                    "description": ""
+                }
+            ],
+            "project": "default"
+        }
+    ],
+    "featureTags": [],
+    "segments": [],
+    "tagTypes": [],
+    "dependencies": [],
+    "links": []
+}
