@@ -1,0 +1,29 @@
+curl -X POST "http://localhost:8013/flagd.evaluation.v1.Service/ResolveBoolean" \
+  -d '{"flagKey":"list-pizza-hawaii","context":{}}' -H "Content-Type: application/json"
+
+###
+
+curl -X POST "http://localhost:8013/flagd.evaluation.v1.Service/ResolveBoolean" \
+  -d '{"flagKey":"list-pizza-hawaii","context":{"env": "qa"}}' -H "Content-Type: application/json"
+
+###
+
+curl -X POST "http://localhost:8013/flagd.evaluation.v1.Service/ResolveBoolean" \
+  -d '{"flagKey":"list-pizza-hawaii","context":{"env": "dev"}}' -H "Content-Type: application/json"
+
+###
+
+curl -X POST "http://localhost:8013/flagd.evaluation.v1.Service/ResolveBoolean" \
+  -d '{"flagKey":"list-pizza-hawaii","context":{"env": "dev", "location": "ca"}}' -H "Content-Type: application/json"
+
+###
+
+curl http://localhost:8080/pizza 
+
+###
+
+curl -H "x-pizzeria-location: ca" http://localhost:8080/pizza 
+
+###
+
+curl http://localhost:8081/recipe

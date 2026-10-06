@@ -1,0 +1,10 @@
+curl -X POST "http://localhost:8013/flagd.evaluation.v1.Service/ResolveBoolean" \
+  -d '{"flagKey":"list-pizza-hawaii","context":{}}' -H "Content-Type: application/json"
+
+###
+
+curl http://localhost:8080/pizza 
+
+###
+
+curl -H "x-pizzeria-location: ca" http://localhost:8080/pizza 

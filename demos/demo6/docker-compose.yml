@@ -1,0 +1,10 @@
+services:
+  flagd:
+    image: ghcr.io/open-feature/flagd:v0.13.2
+    volumes:
+      - ./flagd/:/etc/flagd/
+    tty: true
+    stdin_open: true
+    command: start --uri file:/etc/flagd/flags.flagd.json
+    ports:
+      - 8013:8013

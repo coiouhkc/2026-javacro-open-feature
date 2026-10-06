@@ -1,0 +1,72 @@
+{
+  "$schema": "https://flagd.dev/schema/v0/flags.json",
+  "flags": {
+    "list-pizza-hawaii": {
+      "state": "ENABLED",
+      "defaultVariant": "no",
+      "variants": {
+        "yes": true,
+        "no": false
+      },
+      "targeting": {
+        "if": [
+          {
+            "in": [
+              {
+                "var": "env"
+              },
+              [
+                "qa",
+                "prod"
+              ]
+            ]
+          },
+          "no",
+          {
+            "if": [
+              {
+                "in": [
+                  {
+                    "var": "location"
+                  },
+                  [
+                    "ca"
+                  ]
+                ]
+              },
+              "yes",
+              "no"
+            ]
+          }
+        ]
+      }
+    },
+    "list-pizza-diavolo": {
+      "state": "ENABLED",
+      "defaultVariant": "no",
+      "variants": {
+        "yes": true,
+        "no": false
+      },
+      "targeting": {
+        "fractional": [
+          {
+            "cat": [
+              {
+                "var": "$flagd.timestamp"
+              }
+            ]
+          },
+          [
+            "yes",
+            50
+          ],
+          [
+            "no",
+            50
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+curl http://localhost:8080/pizza 
+
+###
+
+curl -H "x-pizzeria-location: ca" http://localhost:8080/pizza 
+
+###
+
+curl -H "x-pizzeria-location: de" http://localhost:8080/pizza 
+
+###
+
+curl -X POST -H "Content-Type: application/json" http://localhost:8080/pizza -d '{"name": "Hawaii"}'
+
+###
+
+curl -X POST -H "Content-Type: application/json" -H "x-pizzeria-location: ca" http://localhost:8080/pizza -d '{"name": "Hawaii"}'
+
